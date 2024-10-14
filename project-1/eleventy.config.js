@@ -1,12 +1,15 @@
-module.exports = function(eleventyConfig) {
-    // copy `assets/` to `_site/assets`
+module.exports = async function(eleventyConfig) {
+    // Add assets to output folders
     eleventyConfig.addPassthroughCopy("assets");
-    return {
-        dir: {
-            input: "src",
-            output: "_site",
-            includes: "_templates/includes",
-            layouts: "_templates/layouts"
-        }
+}
+
+// Path settings
+module.exports.config = {
+    dir: {
+        input: "src",
+        output: "_site",
+        layouts: "_templates/layouts/",
+        includes: "_templates/includes/"
     }
 }
+

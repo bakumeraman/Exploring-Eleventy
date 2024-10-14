@@ -1,4 +1,4 @@
-{% render "header" %}
-{% render "banner", title: title, bannerContent: bannerContent %}
+{% render "header", pageId: pageId %}
+{% render "banner", pageId: pageId, title: title, bannerContent: bannerContent %}
 {{ content -}}
 {% render "footer" %}
