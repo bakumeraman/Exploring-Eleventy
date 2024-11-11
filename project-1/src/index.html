@@ -1,0 +1,23 @@
+---
+pageId: "accueil"
+layout: "base"
+title: "A la découverte d'Eleventy | Projet 1"
+bannerContent: "Gabarits, composants et données dynamiques"
+cards:
+  - headline: "Gabarits"
+    content: "Modèles de mise en page"
+  - headline: "Composants"
+    content: "Elements réutilisables à l'intérieur d'une page"
+  - headline: "Données dynamiques"
+    content: "Informations contenues dans différents fichiers, récupérées et interprétées par Eleventy lors du rendu du site (rendering)"
+---
+
+## Un titre de second niveau
+
+Vestibulum suscipit dignissim dui, in porta justo dictum a. In eget accumsan diam, quis ullamcorper diam. Vestibulum ut efficitur nisl, eu scelerisque leo. Nulla vestibulum justo nisl, et mattis eros ullamcorper a. Integer consequat lacus a nisl suscipit, eget bibendum justo vulputate. Morbi ut ligula vestibulum, accumsan dolor et, varius nunc. In semper mauris ante, ut ultricies ex tincidunt vitae. Mauris turpis nisi, congue ac ultricies eu, lobortis a dui. Nullam nec risus eleifend, feugiat justo ut, scelerisque orci.
+
+<section class="triptych">
+  {% for card in cards %}
+    {% render 'card', headline: card.headline, content: card.content %}
+  {% endfor %}
+</section>
